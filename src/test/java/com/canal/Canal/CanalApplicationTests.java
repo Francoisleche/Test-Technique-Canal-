@@ -20,14 +20,14 @@ class CanalApplicationTests {
 		Abonne abonne = new Abonne("Laurent","98 rue de Montmorency","canal1",listContrats);
 
 		for(Contrats contrat : abonne.getContrats()){
-			System.out.println(" 1 :"+contrat.getAdresse());
+			System.out.println("Avant changement adresse sur les contrats :"+contrat.getAdresse());
 		}
 
 		conseiller1.changementAdresse(abonne,"28 rue Frontignan");
 
 
 		for(Contrats contrat : abonne.getContrats()){
-			System.out.println(" 2 :"+contrat.getAdresse());
+			System.out.println("Changement adresse sur les contrats :"+contrat.getAdresse());
 		}
 
 		Assert.assertTrue("28 rue Frontignan".equals(abonne.getContrats().get(0).getAdresse()));

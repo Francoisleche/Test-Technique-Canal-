@@ -21,7 +21,11 @@ public class Conseiller {
                 for(Contrats contrat : abonne.getContrats()){
                     contrat.setAdresse(newAdresse);
                 }
+            }else{
+                System.err.println("La nouvelle adresse est null ou vide.");
             }
+        }else{
+            System.err.println("Le canal n'est pas bon.");
         }
     }
 }
